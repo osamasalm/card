@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    font-size: 15px;
+    background-color: hsl(233, 47%, 7%);
+}
+
+.card {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.584);
+    display: flex;
+    max-width: 1440px;
+    margin: 10px;
+    background-color:hsl(244, 38%, 16%);
+    border-radius: 8px;
+}
+
+.profile-main {
+    width: 50%;
+    padding: 50px;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.profile-main h1, .profile-main h2 {
+    color: hsl(0, 0%, 100%);
+}
+
+.profile-main h1 span {
+    color: hsl(277, 64%, 61%);
+}
+
+.profile-main p {
+    margin-top: 20px;
+    line-height: 23px;
+    color: hsla(0, 0%, 100%, 0.75);
+}
+
+.profile-main ul p {
+    margin-top: 13px;
+    line-height: 0;
+    font-size: 12px;
+    color: hsla(0, 0%, 100%, 0.6);
+}
+
+.profile-sidebar{
+    width: 50%;
+    background-image: url(imgs/image-header-desktop.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    border-radius: 0 8px 8px 0;
+}
+
+.layer {
+    background-color: hsla(277, 64%, 61%, 0.605);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0 8px 8px 0;
+}
+
+
+@media (max-width: 650px){
+    .card {
+        flex-direction: column;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        width: auto;
+        min-height: auto;
+        align-items: flex-start;
+        text-align: center;
+    }
+
+    .profile-main {
+        padding: 40px 30px 60px 30px;
+        order: 1;
+        width: auto;
+    }
+
+    .profile-main ul {
+        flex-direction: column;
+    }
+
+    .profile-sidebar {
+        height: 300px;
+        width: 100%;
+        background-image: url(imgs/image-header-mobile.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border-radius: 8px 8px 0 0;
+    }
+
+    .layer {
+        border-radius: 8px 8px 0 0;
+    }
+
+    nav ul {
+        gap: 40px;
+        margin-top: 40px;
+    }
+}
